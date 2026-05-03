@@ -4,7 +4,7 @@ export default function Team({ copy }) {
   return (
     <section className="team" id="team">
       <header className="sec-head">
-        <div className="sec-tag">04 · Team</div>
+        <div className="sec-tag">03 · Team</div>
         <h2 className="sec-title">{copy.teamTitle}</h2>
         <p className="sec-sub">{copy.teamSub}</p>
       </header>

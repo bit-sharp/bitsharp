@@ -362,8 +362,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line-soft);
+  padding-top: 25px;
 }
 .sec-tag {
   font-family: var(--mono);
@@ -586,8 +585,7 @@ img { max-width: 100%; display: block; }
 /* ------------------------------------------------------------
    Work
    ------------------------------------------------------------ */
-.work { padding: 25px var(--gutter) 100px; border-bottom: 1px solid var(--line-soft); }
-.work .sec-head { border-top: 0; padding-top: 0; }
+.work { padding: 100px var(--gutter); border-bottom: 1px solid var(--line-soft); }
 .work-table {
   max-width: var(--maxw);
   margin: 0 auto;

@@ -31,7 +31,7 @@ export default function App() {
       <Nav copy={copy} language={language} onLanguageToggle={onLanguageToggle} onContact={onContact} />
       <Hero copy={copy} accent={ACCENT} showGrid={true} />
 
-      <Work copy={copy} />
+      {/* <Work copy={copy} /> */}
       <Services copy={copy} />
       <Process copy={copy} />
       <Team copy={copy} />

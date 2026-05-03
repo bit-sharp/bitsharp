@@ -5,7 +5,7 @@ export default function Process({ copy }) {
   return (
     <section className="process" id="process">
       <header className="sec-head">
-        <div className="sec-tag">03 · Process</div>
+        <div className="sec-tag">02 · Process</div>
         <h2 className="sec-title">{copy.processTitle}</h2>
         <p className="sec-sub">{copy.processSub}</p>
       </header>

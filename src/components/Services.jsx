@@ -6,7 +6,7 @@ export default function Services({ copy }) {
   return (
     <section className="services" id="services">
       <header className="sec-head">
-        <div className="sec-tag">02 · Services</div>
+        <div className="sec-tag">01 · Services</div>
         <h2 className="sec-title">{copy.servicesTitle}</h2>
         <p className="sec-sub">{copy.servicesSub}</p>
       </header>

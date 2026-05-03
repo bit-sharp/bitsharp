@@ -12,7 +12,7 @@ export default function Contact({ copy }) {
   return (
     <section className="contact" id="contact">
       <header className="sec-head">
-        <div className="sec-tag">05 · Contact</div>
+        <div className="sec-tag">04 · Contact</div>
         <h2 className="sec-title">{copy.contactTitle}</h2>
         <p className="sec-sub">{copy.contactSub}</p>
       </header>
