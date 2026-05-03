@@ -1,17 +1,30 @@
-# Системні файли macOS
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Vite
+*.local
+.vite/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Системні файли Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
 
-# Налаштування редакторів коду та IDE (VS Code, WebStorm тощо)
+# Editor
 .vscode/
 .idea/
 *.suo
-*.ntvs*
-*.njsproj
-*.sln
