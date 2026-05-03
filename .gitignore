@@ -1,0 +1,17 @@
+# Системні файли macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Системні файли Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Налаштування редакторів коду та IDE (VS Code, WebStorm тощо)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
