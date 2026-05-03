@@ -1,6 +1,6 @@
 export const COPY = {
   en: {
-    nav: ["Work", "Services", "Process", "Team", "Contact"],
+    nav: ["Services", "Process", "Team", "Contact"],
     cta: "Start a project",
     eyebrow: "Independent software studio · est. 2025 · Kharkiv / remote",
     heroLine1: "We build",
@@ -24,7 +24,7 @@ export const COPY = {
     footerNote: "bitsharp ltd · made in Kharkiv, Ukraine"
   },
   uk: {
-    nav: ["Роботи", "Послуги", "Процес", "Команда", "Контакти"],
+    nav: ["Послуги", "Процес", "Команда", "Контакти"],
     cta: "Розпочати проєкт",
     eyebrow: "Незалежна студія розробки · з 2025 · Харків / віддалено",
     heroLine1: "Ми пишемо",

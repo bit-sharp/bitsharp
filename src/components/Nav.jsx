@@ -14,7 +14,7 @@ export default function Nav({ copy, language, onLanguageToggle, onContact }) {
         <a href="#top" className="nav-logo"><Wordmark small /></a>
         <ul className="nav-links">
           {copy.nav.map((n, i) => (
-            <li key={i}><a href={`#${['work', 'services', 'process', 'team', 'contact'][i]}`}>{n}</a></li>
+            <li key={i}><a href={`#${['services', 'process', 'team', 'contact'][i]}`}>{n}</a></li>
           ))}
         </ul>
         <div className="nav-actions">
