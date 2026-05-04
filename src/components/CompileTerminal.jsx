@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 
 const LINES = [
-  { t: "$", c: "bitsharp init halberd-portfolio --stack=rust+ts" },
-  { t: "›", c: "resolving 184 deps…", ok: true },
-  { t: "›", c: "schema · 38 tables · 0 conflicts", ok: true },
-  { t: "›", c: "running 2,148 tests · 100% pass", ok: true },
-  { t: "›", c: "p99 latency · 12ms · within budget", ok: true },
-  { t: "✓", c: "deploy → eu-central-1, us-east-1, ap-south-1", ok: true },
+  { t: "$", c: "bitsharp init client-project --stack=react+next+ts" },
+  { t: "›", c: "installing deps…", ok: true },
+  { t: "›", c: "figma tokens · 42 components · synced", ok: true },
+  { t: "›", c: "lighthouse · performance 98 · a11y 100", ok: true },
+  { t: "›", c: "build · 0 errors · 0 warnings", ok: true },
+  { t: "✓", c: "deployed → vercel · live in 23s", ok: true },
   { t: "$", c: "_", cursor: true }
 ]
 

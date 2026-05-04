@@ -19,15 +19,15 @@ export default function Contact({ copy }) {
       <div className="contact-grid">
         <form className="contact-form" onSubmit={submit}>
           <div className="field">
-            <label>Your name</label>
-            <input value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="e.g. Olena Hrytsenko" />
+            <label>{copy.contactName}</label>
+            <input value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder={copy.contactNamePh} />
           </div>
           <div className="field">
-            <label>Work email</label>
+            <label>{copy.contactEmail}</label>
             <input type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})} placeholder="olena@company.io" />
           </div>
           <div className="field">
-            <label>Budget range</label>
+            <label>{copy.contactBudget}</label>
             <div className="chips">
               {['< 50k', '50–150k', '150–500k', '500k +'].map(b => (
                 <button type="button" key={b} className={`chip ${form.budget === b ? 'is-on' : ''}`} onClick={() => setForm({...form, budget: b})}>{b}</button>
@@ -35,33 +35,33 @@ export default function Contact({ copy }) {
             </div>
           </div>
           <div className="field">
-            <label>What are you building?</label>
-            <textarea rows={4} value={form.brief} onChange={e => setForm({...form, brief: e.target.value})} placeholder="A short paragraph beats a 40-page RFP. Tell us the problem, not the spec." />
+            <label>{copy.contactBrief}</label>
+            <textarea rows={4} value={form.brief} onChange={e => setForm({...form, brief: e.target.value})} placeholder={copy.contactBriefPh} />
           </div>
           <button className="btn btn-primary btn-lg" type="submit">
-            {sent ? 'Sent. We\'ll reply within 24h ✓' : 'Send brief →'}
+            {sent ? copy.contactSent : copy.contactSend}
           </button>
         </form>
         <aside className="contact-aside">
           <div className="ca-block">
-            <div className="ca-k">Direct</div>
+            <div className="ca-k">{copy.contactDirect}</div>
             <a className="ca-v" href="mailto:hello@bitsharp.dev">hello@bitsharp.dev</a>
           </div>
           <div className="ca-block">
-            <div className="ca-k">Studio</div>
+            <div className="ca-k">{copy.contactStudio}</div>
             <div className="ca-v">7 Rynok Sq · Lviv 79008<br/>Ukraine</div>
           </div>
           <div className="ca-block">
-            <div className="ca-k">Hours</div>
-            <div className="ca-v">Mon – Fri · 09:00 – 19:00 EET<br/>Async always</div>
+            <div className="ca-k">{copy.contactHours}</div>
+            <div className="ca-v">{copy.contactHoursVal}<br/>Async always</div>
           </div>
           <div className="ca-block">
-            <div className="ca-k">Open roles</div>
-            <div className="ca-v">Senior platform eng · Sr applied AI</div>
+            <div className="ca-k">{copy.contactRoles}</div>
+            <div className="ca-v">{copy.contactRolesVal}</div>
           </div>
           <div className="ca-block ca-block-quiet">
             <div className="ca-k">{'/* note */'}</div>
-            <div className="ca-v ca-quiet">We don't take more than three new engagements per quarter. If we say yes, you have the team.</div>
+            <div className="ca-v ca-quiet">{copy.contactNote}</div>
           </div>
         </aside>
       </div>

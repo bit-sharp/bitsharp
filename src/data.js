@@ -6,21 +6,40 @@ export const COPY = {
     heroLine1: "We build",
     heroLine2: "sharp",
     heroLine3: "software.",
-    heroSub: "bitsharp is a small team of senior engineers shipping production systems for fintech, logistics and developer tools. No agencies. No layers. Just the people writing the code.",
-    statLabel1: "Years compounding",
-    statLabel2: "Shipped products",
-    statLabel3: "Senior engineers",
-    statLabel4: "Avg. retention",
+    heroSub: "bitsharp is four developer-students from Kharkiv. We build web apps with React, mobile apps with Flutter, and design clean interfaces in Figma. Real work, fair prices, no overhead.",
+    heroCta1: "See what we do",
+    heroCta2: "Selected work",
+    heroTag: "/* sharpened since 2025 */",
+    statLabel1: "Years of coding",
+    statLabel2: "Projects shipped",
+    statLabel3: "Team members",
+    statLabel4: "Avg. satisfaction",
+    statSuf: "yrs",
     servicesTitle: "What we do",
-    servicesSub: "Four practices. One team rotates between them.",
+    servicesSub: "Four things we do well. One team handles all of them.",
     processTitle: "How we work",
-    processSub: "A two-week rhythm. No SOWs that read like novels.",
+    processSub: "Simple steps, no corporate overhead.",
     workTitle: "Selected work",
-    workSub: "Public case studies. Ask for the rest under NDA.",
-    teamTitle: "The bench",
-    teamSub: "Seven engineers. One designer. Zero account managers.",
+    workSub: "Things we've built. Ask about anything you see.",
+    teamTitle: "Who we are",
+    teamSub: "Four people. Three developers and one PM who writes code too.",
     contactTitle: "Let's talk",
-    contactSub: "Tell us what you're building. We answer within one business day, in plain language.",
+    contactSub: "Tell us what you need. We reply within a day, in plain language.",
+    contactName: "Your name",
+    contactEmail: "Work email",
+    contactBudget: "Budget range",
+    contactBrief: "What are you building?",
+    contactNamePh: "e.g. Olena Hrytsenko",
+    contactBriefPh: "What's the project? A sentence or two is enough to get started.",
+    contactSend: "Send brief →",
+    contactSent: "Sent! We'll reply within 24h ✓",
+    contactDirect: "Direct",
+    contactStudio: "Studio",
+    contactHours: "Hours",
+    contactRoles: "Open roles",
+    contactHoursVal: "Mon – Fri · 10:00 – 20:00 EET",
+    contactRolesVal: "React dev · Flutter dev",
+    contactNote: "We're a small team and we take projects we can genuinely do well. If we say yes, you have us fully.",
     footerNote: "bitsharp ltd · made in Kharkiv, Ukraine"
   },
   uk: {
@@ -30,55 +49,122 @@ export const COPY = {
     heroLine1: "Ми пишемо",
     heroLine2: "гострий",
     heroLine3: "софт.",
-    heroSub: "bitsharp — маленька команда сеньйорних інженерів, що запускає продакшн-системи для fintech, логістики та девтулзів. Без агенцій. Без прошарків. Лише ті, хто пише код.",
-    statLabel1: "Років роботи",
-    statLabel2: "Запущених продуктів",
-    statLabel3: "Сеньйор-інженерів",
-    statLabel4: "Середнє утримання",
+    heroSub: "bitsharp — четверо студентів-розробників із Харкова. Робимо вебзастосунки на React, мобільні на Flutter, дизайн у Figma. Реальний результат, нормальні ціни, без зайвого.",
+    heroCta1: "Наші послуги",
+    heroCta2: "Вибрані роботи",
+    heroTag: "/* загострено з 2025 */",
+    statLabel1: "Років програмування",
+    statLabel2: "Проєктів зроблено",
+    statLabel3: "Людей у команді",
+    statLabel4: "Задоволеність",
+    statSuf: "рр.",
     servicesTitle: "Що ми робимо",
-    servicesSub: "Чотири напрямки. Одна команда ротує між ними.",
+    servicesSub: "Чотири речі, які ми робимо добре. Одна команда займається всіма.",
     processTitle: "Як ми працюємо",
-    processSub: "Двотижневий ритм. Без контрактів-романів.",
+    processSub: "Прості кроки, без корпоративного.",
     workTitle: "Вибрані роботи",
-    workSub: "Публічні кейси. Решта — за NDA.",
-    teamTitle: "Команда",
-    teamSub: "Сім інженерів. Один дизайнер. Нуль акаунт-менеджерів.",
+    workSub: "Що ми зробили. Питайте про будь-що.",
+    teamTitle: "Хто ми",
+    teamSub: "Четверо. Три розробники та менеджер, що теж пише код.",
     contactTitle: "Поговорімо",
-    contactSub: "Розкажіть, що ви будуєте. Відповідаємо протягом одного робочого дня, простою мовою.",
+    contactSub: "Розкажіть що потрібно. Відповідаємо протягом дня, без зайвих слів.",
+    contactName: "Ваше ім'я",
+    contactEmail: "Пошта",
+    contactBudget: "Бюджет",
+    contactBrief: "Що ви будуєте?",
+    contactNamePh: "напр. Олена Гриценко",
+    contactBriefPh: "Що за проєкт? Одного-двох речень достатньо для початку.",
+    contactSend: "Надіслати →",
+    contactSent: "Надіслано! Відповімо протягом 24г ✓",
+    contactDirect: "Прямий контакт",
+    contactStudio: "Студія",
+    contactHours: "Години",
+    contactRoles: "Відкриті вакансії",
+    contactHoursVal: "Пн – Пт · 10:00 – 20:00 EET",
+    contactRolesVal: "React розробник · Flutter розробник",
+    contactNote: "Ми маленька команда і беремо проєкти, які справді можемо зробити добре. Якщо кажемо «так» — ми ваші повністю.",
     footerNote: "bitsharp ltd · зроблено у Харкові, Україна"
   }
 }
 
-export const SERVICES = [
-  { id: "01", code: "build", title: "Product engineering", body: "Greenfield web and mobile products. TypeScript, Rust, Swift. We own the stack from the first commit to live ops.", tags: ["React", "Next", "Rust", "Postgres"] },
-  { id: "02", code: "scale", title: "Platform & infra", body: "Latency budgets, cost ceilings, observability that actually pages the right person. AWS, GCP, bare-metal where it pays off.", tags: ["k8s", "Terraform", "OTel"] },
-  { id: "03", code: "ai",    title: "Applied AI", body: "Retrieval, evals, agent loops. We build the boring 80% around the model so the demo survives contact with users.", tags: ["LLM", "RAG", "Evals"] },
-  { id: "04", code: "audit", title: "Audits & rescue", body: "Drop us into a stuck codebase. Two weeks later you get a written assessment, a triaged backlog and a path forward.", tags: ["Review", "Refactor"] }
-]
+export const SERVICES = {
+  en: [
+    {
+      id: "01", code: "web",
+      title: "Web development",
+      body: "Websites and web apps built with React and Next.js. From a landing page that converts to a full-featured product. We design in Figma first so you see it before we build it.",
+      tags: ["React", "Next.js", "TypeScript", "Tailwind"]
+    },
+    {
+      id: "02", code: "mobile",
+      title: "Mobile apps",
+      body: "Cross-platform apps with Flutter. One codebase, iOS and Android. We handle everything — design, development, App Store submission.",
+      tags: ["Flutter", "Dart", "iOS", "Android"]
+    },
+    {
+      id: "03", code: "design",
+      title: "UI / UX Design",
+      body: "Interface design and prototyping in Figma. Clickable prototypes, component libraries, design systems — ready to hand off to developers or build ourselves.",
+      tags: ["Figma", "UX", "Prototypes", "Design systems"]
+    },
+    {
+      id: "04", code: "backend",
+      title: "Backend & APIs",
+      body: "Server logic, databases, and third-party integrations. Python or Node.js depending on the task. We wire up your frontend to whatever it needs.",
+      tags: ["Node.js", "Python", "Postgres", "REST"]
+    }
+  ],
+  uk: [
+    {
+      id: "01", code: "web",
+      title: "Веброзробка",
+      body: "Сайти та вебзастосунки на React і Next.js. Від лендингу що продає до повноцінного продукту. Спочатку проєктуємо в Figma — ви бачите результат до того, як ми починаємо писати код.",
+      tags: ["React", "Next.js", "TypeScript", "Tailwind"]
+    },
+    {
+      id: "02", code: "mobile",
+      title: "Мобільні застосунки",
+      body: "Кросплатформенні застосунки на Flutter. Один кодбейс — iOS і Android. Беремо на себе всі: дизайн, розробку, публікацію в App Store.",
+      tags: ["Flutter", "Dart", "iOS", "Android"]
+    },
+    {
+      id: "03", code: "design",
+      title: "UI / UX Дизайн",
+      body: "Дизайн інтерфейсів і прототипування в Figma. Клікабельні прототипи, бібліотеки компонентів, дизайн-системи — готові до передачі розробникам або до самостійної розробки.",
+      tags: ["Figma", "UX", "Прототипи", "Дизайн-системи"]
+    },
+    {
+      id: "04", code: "backend",
+      title: "Бекенд та API",
+      body: "Серверна логіка, бази даних та інтеграції. Python або Node.js залежно від задачі. Підключаємо ваш фронтенд до всього необхідного.",
+      tags: ["Node.js", "Python", "Postgres", "REST"]
+    }
+  ]
+}
 
-export const PROCESS = [
-  { week: "Week 0", title: "Discovery call", body: "60 minutes. We figure out if we're the right team. If we're not, we tell you who is." },
-  { week: "Week 1", title: "Scoping sprint", body: "A flat-fee, two-week scoping engagement. You walk away owning a spec, regardless of whether we keep working together." },
-  { week: "Week 2+", title: "Build cadence", body: "Two-week iterations. Friday demo. Monday plan. A shared Linear, a shared Slack, no status PDFs." },
-  { week: "Ongoing", title: "Live ops", body: "On-call rotation, cost reviews, quarterly architecture audits. We don't disappear after launch." }
-]
+export const PROCESS = {
+  en: [
+    { week: "Step 1",  title: "Discovery call",   body: "30–60 minutes. We listen to your needs, discuss deadlines and price." },
+    { week: "Step 2",  title: "Design in Figma",  body: "Before we write a single line of code, we show you what it looks like. You approve the design, then we build it." },
+    { week: "Step 3",  title: "Build",             body: "We build in short cycles and show you progress along the way. You're always in the loop, no big surprises at the end." },
+    { week: "Step 4",  title: "Handoff",           body: "We deliver the code, set up hosting if needed, and walk you through everything. We stay reachable after launch." }
+  ],
+  uk: [
+    { week: "Крок 1",  title: "Дзвінок",           body: "30–60 хвилин. Ми вислухаємо ваші потреби, обговорюємо дедлайни та ціну." },
+    { week: "Крок 2",  title: "Дизайн у Figma",    body: "Перш ніж написати рядок коду — показуємо як це буде виглядати. Ви затверджуєте дизайн, тоді ми будуємо." },
+    { week: "Крок 3",  title: "Розробка",           body: "Будуємо короткими циклами, показуємо прогрес по ходу. Ви завжди в курсі, ніяких сюрпризів наприкінці." },
+    { week: "Крок 4",  title: "Здача",              body: "Передаємо код, налаштовуємо хостинг за потреби, пояснюємо все. Залишаємось на зв'язку після запуску." }
+  ]
+}
 
 export const WORK = [
-  { client: "Halberd Capital",  sector: "Fintech",     year: "2025", note: "Real-time portfolio engine. p99 < 12ms across 4 regions.",       metric: "p99 12ms" },
-  { client: "Routesmith",       sector: "Logistics",   year: "2024", note: "Dispatcher console used by 1,800 drivers. Replaced a SaaS that cost 6× more.", metric: "1,800 dau" },
-  { client: "Lemma",            sector: "Devtools",    year: "2024", note: "CLI + dashboard for ML eval pipelines. Open-sourced under MIT.",  metric: "11k ★" },
-  { client: "Foundry Linen",    sector: "Commerce",    year: "2023", note: "Headless storefront, custom checkout, 3rd-party logistics glue.", metric: "+38% AOV" },
-  { client: "Northbeam Health", sector: "Health",      year: "2023", note: "HIPAA-compliant intake flow. Audited, signed off, boring on purpose.", metric: "0 incidents" },
-  { client: "Quill",            sector: "AI",          year: "2025", note: "Document agent. Eval harness, retrieval, the whole 80%.",         metric: "94% pass" }
+  { client: "Placeholder",  sector: "Web",      year: "2025", note: "Add your project here.",  metric: "—" },
 ]
 
+// ⚠️  Replace with your real names before going live
 export const TEAM = [
-  { initials: "MK", name: "Marta K.",    role: "Founder · Staff eng",  yrs: 14, focus: "Distributed systems" },
-  { initials: "OR", name: "Oleh R.",     role: "Staff engineer",       yrs: 12, focus: "Rust · low-level" },
-  { initials: "IS", name: "Iryna S.",    role: "Senior engineer",      yrs: 9,  focus: "React · type theory" },
-  { initials: "DK", name: "Dmytro K.",   role: "Senior engineer",      yrs: 11, focus: "Infra · SRE" },
-  { initials: "NB", name: "Nazar B.",    role: "Senior engineer",      yrs: 8,  focus: "iOS · Swift" },
-  { initials: "AT", name: "Anna T.",     role: "Senior engineer",      yrs: 7,  focus: "Applied ML" },
-  { initials: "VP", name: "Vlad P.",     role: "Senior engineer",      yrs: 10, focus: "Backend · Go" },
-  { initials: "KH", name: "Kateryna H.", role: "Principal designer",   yrs: 9,  focus: "Product · type" }
+  { initials: "XX", name: "Ім'я Прізвище", role: "Founder · PM & Dev", yrs: 3, focus: "React · TypeScript" },
+  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
+  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "Flutter · Dart"    },
+  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "Python · Node.js"  },
 ]

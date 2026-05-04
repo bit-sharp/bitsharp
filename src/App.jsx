@@ -32,8 +32,8 @@ export default function App() {
       <Hero copy={copy} accent={ACCENT} showGrid={true} />
 
       {/* <Work copy={copy} /> */}
-      <Services copy={copy} />
-      <Process copy={copy} />
+      <Services copy={copy} language={language} />
+      <Process copy={copy} language={language} />
       <Team copy={copy} />
       <Contact copy={copy} />
       <Footer copy={copy} />

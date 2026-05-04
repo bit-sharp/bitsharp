@@ -32,9 +32,9 @@ export default function Hero({ copy, accent, showGrid }) {
           </div>
         </div>
         <div className="hero-foot">
-          <a href="#services" className="btn btn-primary">See what we do <span className="btn-arrow">↓</span></a>
-          <a href="#work" className="btn btn-ghost">Selected work</a>
-          <span className="hero-tag">{'/* sharpened since 2025 */'}</span>
+          <a href="#services" className="btn btn-primary">{copy.heroCta1} <span className="btn-arrow">↓</span></a>
+          <a href="#work" className="btn btn-ghost">{copy.heroCta2}</a>
+          <span className="hero-tag">{copy.heroTag}</span>
         </div>
       </div>
       <StackMarquee />

@@ -1,7 +1,8 @@
 import { PROCESS } from '../data'
 import CompileTerminal from './CompileTerminal'
 
-export default function Process({ copy }) {
+export default function Process({ copy, language }) {
+  const process = PROCESS[language] ?? PROCESS.en
   return (
     <section className="process" id="process">
       <header className="sec-head">
@@ -10,12 +11,12 @@ export default function Process({ copy }) {
         <p className="sec-sub">{copy.processSub}</p>
       </header>
       <ol className="process-list">
-        {PROCESS.map((p, i) => (
+        {process.map((p, i) => (
           <li key={i} className="process-step">
             <div className="step-week">{p.week}</div>
             <div className="step-bar">
               <span className="step-dot" />
-              {i < PROCESS.length - 1 && <span className="step-line" />}
+              {i < process.length - 1 && <span className="step-line" />}
             </div>
             <div className="step-body">
               <h3 className="step-title">{p.title}</h3>

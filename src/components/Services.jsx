@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { SERVICES } from '../data'
 
-export default function Services({ copy }) {
+export default function Services({ copy, language }) {
   const [active, setActive] = useState(0)
+  const services = SERVICES[language] ?? SERVICES.en
   return (
     <section className="services" id="services">
       <header className="sec-head">
@@ -11,7 +12,7 @@ export default function Services({ copy }) {
         <p className="sec-sub">{copy.servicesSub}</p>
       </header>
       <div className="services-grid">
-        {SERVICES.map((s, i) => (
+        {services.map((s, i) => (
           <article
             key={s.id}
             className={`service ${active === i ? 'is-active' : ''}`}
