@@ -776,6 +776,29 @@ img { max-width: 100%; display: block; }
   border-color: var(--accent);
 }
 
+.contact-links { max-width: var(--maxw); margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.contact-tg {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--serif);
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--fg);
+  transition: color .2s;
+}
+.contact-tg:hover { color: var(--accent); }
+.contact-tg-icon { width: 0.75em; height: 0.75em; flex-shrink: 0; }
+.contact-mail {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--fg-3);
+  transition: color .2s;
+  margin-left: 4px;
+}
+.contact-mail:hover { color: var(--fg-2); }
+
 .contact-aside { display: flex; flex-direction: column; gap: 28px; }
 .ca-block {
   display: grid;
