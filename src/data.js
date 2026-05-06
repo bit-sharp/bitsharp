@@ -25,7 +25,7 @@ export const COPY = {
     teamSub: "Four people. Three developers and one PM who writes code too.",
     contactTitle: "Let's talk",
     contactSub: "Write to us on Telegram — we reply fast.",
-    footerNote: "bitsharp ltd · made in Kharkiv, Ukraine"
+    footerNote: "bitsharp · made in Kharkiv, Ukraine"
   },
   uk: {
     nav: ["Послуги", "Процес", "Команда", "Контакти"],
@@ -34,7 +34,7 @@ export const COPY = {
     heroLine1: "Ми пишемо",
     heroLine2: "гострий",
     heroLine3: "софт.",
-    heroSub: "bitsharp — четверо розробників із Харкова. Робимо вебзастосунки на React, мобільні на Flutter, дизайн у Figma. Реальний результат, нормальні ціни, без зайвого.",
+    heroSub: "bitsharp — четверо розробників із Харкова. Робимо вебзастосунки на React/Svelte, мобільні на Flutter, дизайн у Figma.",
     heroCta1: "Наші послуги",
     heroCta2: "Вибрані роботи",
     heroTag: "/* загострено з 2025 */",
@@ -53,7 +53,7 @@ export const COPY = {
     teamSub: "Четверо. Три розробники та менеджер, що теж пише код.",
     contactTitle: "Поговорімо",
     contactSub: "Напишіть нам у Telegram — відповідаємо швидко.",
-    footerNote: "bitsharp ltd · зроблено у Харкові, Україна"
+    footerNote: "bitsharp · зроблено у Харкові, Україна"
   }
 }
 
@@ -132,8 +132,8 @@ export const WORK = [
 ]
 
 export const TEAM = [
-  { initials: "Є. К.", name: "Євген Кулик", role: "Founder · PM & Dev", yrs: 2, focus: "React · TypeScript" },
-  { initials: "В. П.", name: "Валерій Парийський", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
-  { initials: "І. К.", name: "Ілля Клочков", role: "Developer",           yrs: 2, focus: "Flutter · Dart"    },
-  { initials: "В. Д.", name: "Вадім Дмитрієв", role: "Developer",           yrs: 2, focus: "Python · Node.js"  },
+  { initials: "Є. К.", name: "Євген К.", role: "Founder · PM & Dev", yrs: 2, focus: "React · TypeScript" },
+  { initials: "В. П.", name: "Валерій П.", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
+  { initials: "І. К.", name: "Ілля К.", role: "Developer",           yrs: 3, focus: "Flutter · Dart"    },
+  { initials: "В. Д.", name: "Вадим Д.", role: "Developer",           yrs: 3, focus: "Python · Node.js"  },
 ]

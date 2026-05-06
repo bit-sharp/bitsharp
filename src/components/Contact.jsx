@@ -1,7 +1,7 @@
 import { SiTelegram } from 'react-icons/si'
 
 const TG_HANDLE = '@bitsharp_software'
-const TG_URL    = 'https://t.me/bitsharpx'
+const TG_URL    = 'https://t.me/bitsharp_software'
 const MAIL      = 'bitsharpsoftware@gmail.com'
 
 export default function Contact({ copy }) {
