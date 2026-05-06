@@ -732,62 +732,37 @@ img { max-width: 100%; display: block; }
    Contact
    ------------------------------------------------------------ */
 .contact { padding: 100px var(--gutter); border-bottom: 1px solid var(--line-soft); }
-.contact-grid {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 64px;
+.contact-inner { max-width: var(--maxw); margin: 0 auto; }
+.contact-top {
+  border-top: 1px solid var(--line-soft);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-@media (max-width: 920px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-.contact-form { display: flex; flex-direction: column; gap: 24px; }
-.field { display: flex; flex-direction: column; gap: 8px; }
-.field label {
-  font-family: var(--mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--fg-3);
+.contact-title {
+  font-family: var(--serif);
+  font-size: clamp(64px, 9vw, 120px);
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  margin: 0 0 48px;
+  font-weight: 400;
 }
-.field input, .field textarea {
-  font-family: var(--sans);
-  font-size: 16px;
-  color: var(--fg);
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  padding: 12px 2px;
-  outline: none;
-  resize: none;
-  transition: border-color .2s;
+.contact-period { color: var(--accent); }
+.contact-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 32px;
+  gap: 32px;
 }
-.field input::placeholder, .field textarea::placeholder { color: var(--fg-3); }
-.field input:focus, .field textarea:focus { border-bottom-color: var(--accent); }
-
-.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 0 4px; }
-.chip {
-  padding: 8px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--fg-2);
-  transition: all .2s;
-}
-.chip:hover { border-color: var(--fg-3); color: var(--fg); }
-.chip.is-on {
-  background: var(--accent);
-  color: #0d0d10;
-  border-color: var(--accent);
-}
-
-.contact-links { max-width: var(--maxw); margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
 .contact-tg {
   display: inline-flex;
   align-items: center;
   gap: 18px;
   font-family: var(--serif);
-  font-size: clamp(36px, 6vw, 72px);
+  font-size: clamp(32px, 5vw, 64px);
   letter-spacing: -0.02em;
   line-height: 1;
   color: var(--fg);
@@ -795,40 +770,32 @@ img { max-width: 100%; display: block; }
 }
 .contact-tg:hover { color: var(--accent); }
 .contact-tg-icon { width: 0.75em; height: 0.75em; flex-shrink: 0; }
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding-bottom: 4px;
+}
 .contact-mail {
   font-family: var(--mono);
   font-size: 13px;
   color: var(--fg-3);
   transition: color .2s;
-  margin-left: 4px;
 }
 .contact-mail:hover { color: var(--fg-2); }
-
-.contact-aside { display: flex; flex-direction: column; gap: 28px; }
-.ca-block {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 16px;
-  padding-bottom: 22px;
-  border-bottom: 1px dashed var(--line-soft);
-}
-.ca-block:last-child { border-bottom: 0; }
-.ca-k {
-  font-family: var(--mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.contact-note {
+  font-size: 13px;
   color: var(--fg-3);
+  margin: 0;
+  text-align: right;
+  max-width: 28ch;
 }
-.ca-v {
-  font-family: var(--serif);
-  font-size: 22px;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
+@media (max-width: 640px) {
+  .contact-bottom { flex-direction: column; align-items: flex-start; }
+  .contact-side { align-items: flex-start; }
+  .contact-note { text-align: left; }
 }
-a.ca-v { color: var(--accent); transition: color .2s; }
-a.ca-v:hover { color: var(--fg); }
-.ca-block-quiet .ca-v { font-family: var(--sans); font-size: 14px; color: var(--fg-2); line-height: 1.5; }
 
 /* ------------------------------------------------------------
    Footer

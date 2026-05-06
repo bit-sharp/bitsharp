@@ -28,7 +28,6 @@ export default function Hero({ copy, accent, showGrid }) {
             <div className="meta-row"><span className="meta-k">index</span><span className="meta-v">001 / 042</span></div>
             <div className="meta-row"><span className="meta-k">latency</span><span className="meta-v">p99 · 12ms</span></div>
             <div className="meta-row"><span className="meta-k">availability</span><span className="meta-v">99.98 %</span></div>
-            <div className="meta-row"><span className="meta-k">on-call</span><span className="meta-v"><span className="dot dot-live" /> live</span></div>
           </div>
         </div>
         <div className="hero-foot">

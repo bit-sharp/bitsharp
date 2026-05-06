@@ -120,7 +120,7 @@ export const PROCESS = {
     { week: "Step 4",  title: "Handoff",           body: "We deliver the code, set up hosting if needed, and walk you through everything. We stay reachable after launch." }
   ],
   uk: [
-    { week: "Крок 1",  title: "Дзвінок",           body: "30–60 хвилин. Слухаємо що потрібно і чесно кажемо: що можемо зробити і скільки це займе." },
+    { week: "Крок 1",  title: "Дзвінок",           body: "30–60 хвилин. Слухаємо що потрібно і чесно кажемо: що можемо зробити і скільки це займе часу." },
     { week: "Крок 2",  title: "Дизайн у Figma",    body: "Перш ніж написати рядок коду — показуємо як це буде виглядати. Ви затверджуєте дизайн, тоді ми будуємо." },
     { week: "Крок 3",  title: "Розробка",           body: "Будуємо короткими циклами, показуємо прогрес по ходу. Ви завжди в курсі, ніяких сюрпризів наприкінці." },
     { week: "Крок 4",  title: "Здача",              body: "Передаємо код, налаштовуємо хостинг за потреби, пояснюємо все. Залишаємось на зв'язку після запуску." }
@@ -131,10 +131,9 @@ export const WORK = [
   { client: "Placeholder",  sector: "Web",  year: "2025", note: "Add your project here.", metric: "—" },
 ]
 
-// ⚠️  Replace with your real names before going live
 export const TEAM = [
-  { initials: "XX", name: "Ім'я Прізвище", role: "Founder · PM & Dev", yrs: 3, focus: "React · TypeScript" },
-  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
-  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "Flutter · Dart"    },
-  { initials: "XX", name: "Ім'я Прізвище", role: "Developer",           yrs: 2, focus: "Python · Node.js"  },
+  { initials: "Є. К.", name: "Євген Кулик", role: "Founder · PM & Dev", yrs: 2, focus: "React · TypeScript" },
+  { initials: "В. П.", name: "Валерій Парийський", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
+  { initials: "І. К.", name: "Ілля Клочков", role: "Developer",           yrs: 2, focus: "Flutter · Dart"    },
+  { initials: "В. Д.", name: "Вадім Дмитрієв", role: "Developer",           yrs: 2, focus: "Python · Node.js"  },
 ]
