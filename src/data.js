@@ -42,7 +42,7 @@ export const COPY = {
     contactHoursValue: "10:00 – 19:00",
     footerNote: "bitsharp · made in Kharkiv, Ukraine",
     team: [
-      { initials: "Ye. K.", name: "Yevhen K.", role: "Founder · PM & Dev" },
+      { initials: "Y. K.", name: "Yevhen K.", role: "Founder · PM & Dev" },
       { initials: "V. P.", name: "Valerii P.", role: "Developer" },
       { initials: "I. K.", name: "Illia K.", role: "Developer" },
       { initials: "V. D.", name: "Vadym D.", role: "Developer" },
