@@ -47,7 +47,6 @@ export default function Contact({ copy }) {
             <div className="cc-body">
               <h3 className="cc-title">Telegram</h3>
               <p className="cc-value">{TG_HANDLE}</p>
-              <p className="cc-note">Usually replies within ~2 hours, Mon–Fri.</p>
             </div>
             <div className="cc-foot">
               <span>Send a message</span>
