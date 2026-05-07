@@ -2,7 +2,7 @@ import { TEAM } from '../data'
 
 export default function Team({ copy }) {
   return (
-    <section className="team" id="team">
+    <section className="team reveal" id="team" style={{ '--reveal-i': 2 }}>
       <header className="sec-head">
         <div className="sec-tag">03 · Team</div>
         <h2 className="sec-title">{copy.teamTitle}</h2>
@@ -18,7 +18,6 @@ export default function Team({ copy }) {
             <div className="member-meta">
               <div className="member-name">{m.name}</div>
               <div className="member-role">{m.role}</div>
-              <div className="member-focus"><span>{m.focus}</span><span className="member-yrs">{m.yrs}y</span></div>
             </div>
           </div>
         ))}

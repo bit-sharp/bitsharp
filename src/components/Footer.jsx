@@ -3,9 +3,6 @@ import Wordmark from './Wordmark'
 export default function Footer({ copy }) {
   return (
     <footer className="footer">
-      <div className="footer-row">
-        <Wordmark />
-      </div>
       <div className="footer-row footer-meta">
         <span>{copy.footerNote}</span>
         <span>© 2025–2026</span>

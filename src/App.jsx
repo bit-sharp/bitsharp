@@ -12,11 +12,31 @@ import Footer from './components/Footer'
 const ACCENT = '#AF64B2'
 
 export default function App() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState(() => {
+    if (typeof navigator === 'undefined') return 'en'
+    const langs = [navigator.language, ...(navigator.languages || [])]
+      .filter(Boolean)
+      .map(l => l.toLowerCase())
+    return langs.some(l => l.startsWith('uk') || l.startsWith('ru')) ? 'uk' : 'en'
+  })
   const copy = COPY[language]
 
   useEffect(() => {
     document.documentElement.style.setProperty('--accent', ACCENT)
+  }, [])
+
+  useEffect(() => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible')
+          io.unobserve(e.target)
+        }
+      })
+    }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' })
+
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
+    return () => io.disconnect()
   }, [])
 
   const onContact = () => {
