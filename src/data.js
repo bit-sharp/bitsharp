@@ -25,15 +25,22 @@ export const COPY = {
     teamSub: "Four people. Three developers and one PM who writes code too.",
     contactTitle: "Let's talk",
     contactSub: "Write to us on Telegram — we reply fast.",
-    footerNote: "bitsharp · made in Kharkiv, Ukraine"
+    contactTag: "04 · Contact",
+    footerNote: "bitsharp · made in Kharkiv, Ukraine",
+    team: [
+      { initials: "Y. K.", name: "Yevhen K.", role: "Founder · PM & Dev" },
+      { initials: "V. P.", name: "Valerii P.", role: "Developer" },
+      { initials: "I. K.", name: "Illia K.", role: "Developer" },
+      { initials: "V. D.", name: "Vadym D.", role: "Developer" },
+    ]
   },
   uk: {
     nav: ["Послуги", "Процес", "Команда", "Контакти"],
     cta: "Розпочати проєкт",
     eyebrow: "Незалежна студія розробки · з 2025 · Харків / віддалено",
-    heroLine1: "Ми пишемо",
-    heroLine2: "гострий",
-    heroLine3: "софт.",
+    heroLine1: "We build",
+    heroLine2: "sharp",
+    heroLine3: "software.",
     heroSub: "bitsharp — четверо розробників із Харкова. Робимо вебзастосунки на React/Svelte, мобільні на Flutter, дизайн у Figma.",
     heroCta1: "Що ми робимо",
     heroCta2: "Вибрані роботи",
@@ -53,7 +60,14 @@ export const COPY = {
     teamSub: "Четверо. Три розробники та менеджер, що теж пише код.",
     contactTitle: "Поговорімо",
     contactSub: "Напишіть нам у Telegram — відповідаємо швидко.",
-    footerNote: "bitsharp · зроблено у Харкові, Україна"
+    contactTag: "04 · Контакти",
+    footerNote: "bitsharp · зроблено у Харкові, Україна",
+    team: [
+      { initials: "Є. К.", name: "Євген К.", role: "Засновник · PM & Dev" },
+      { initials: "В. П.", name: "Валерій П.", role: "Розробник" },
+      { initials: "І. К.", name: "Ілля К.", role: "Розробник" },
+      { initials: "В. Д.", name: "Вадим Д.", role: "Розробник" },
+    ]
   }
 }
 
@@ -129,11 +143,4 @@ export const PROCESS = {
 
 export const WORK = [
   { client: "Placeholder",  sector: "Web",  year: "2025", note: "Add your project here.", metric: "—" },
-]
-
-export const TEAM = [
-  { initials: "Є. К.", name: "Євген К.", role: "Founder · PM & Dev", yrs: 2, focus: "React · TypeScript" },
-  { initials: "В. П.", name: "Валерій П.", role: "Developer",           yrs: 2, focus: "React · Next.js"   },
-  { initials: "І. К.", name: "Ілля К.", role: "Developer",           yrs: 3, focus: "Flutter · Dart"    },
-  { initials: "В. Д.", name: "Вадим Д.", role: "Developer",           yrs: 3, focus: "Python · Node.js"  },
 ]

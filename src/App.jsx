@@ -12,13 +12,7 @@ import Footer from './components/Footer'
 const ACCENT = '#AF64B2'
 
 export default function App() {
-  const [language, setLanguage] = useState(() => {
-    if (typeof navigator === 'undefined') return 'en'
-    const langs = [navigator.language, ...(navigator.languages || [])]
-      .filter(Boolean)
-      .map(l => l.toLowerCase())
-    return langs.some(l => l.startsWith('uk') || l.startsWith('ru')) ? 'uk' : 'en'
-  })
+  const [language, setLanguage] = useState('en')
   const copy = COPY[language]
 
   useEffect(() => {

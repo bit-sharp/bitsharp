@@ -12,7 +12,7 @@ export default function Hero({ copy, accent, showGrid }) {
   return (
     <section className="hero" id="top">
       <div className="hero-frame">
-        <h1 className="hero-title">
+        <h1 className="hero-title" translate="no">
           <SharpenGrid accent={accent} enabled={showGrid} />
           <span className="ht-line">{copy.heroLine1}</span>
           <span className="ht-line ht-display">{copy.heroLine2}<span className="ht-period">.</span></span>

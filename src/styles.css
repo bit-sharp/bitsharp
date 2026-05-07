@@ -709,9 +709,20 @@ img { max-width: 100%; display: block; }
   align-self: start;
 }
 @media (max-width: 720px) {
-  .process-step { grid-template-columns: 1fr; }
-  .step-bar { display: none; }
+  .process-step {
+    grid-template-columns: 28px 1fr;
+    grid-template-areas:
+      "bar week"
+      "bar body";
+    gap: 4px 14px;
+    padding: 22px 0;
+  }
+  .step-bar { grid-area: bar; }
+  .step-week { grid-area: week; padding-top: 2px; }
+  .step-body { grid-area: body; }
   .step-num { display: none; }
+  .step-line { bottom: -57px; }
+  .step-title { font-size: 22px; }
 }
 
 /* Terminal */

@@ -1,5 +1,3 @@
-import { TEAM } from '../data'
-
 export default function Team({ copy }) {
   return (
     <section className="team reveal" id="team" style={{ '--reveal-i': 2 }}>
@@ -9,7 +7,7 @@ export default function Team({ copy }) {
         <p className="sec-sub">{copy.teamSub}</p>
       </header>
       <div className="team-grid">
-        {TEAM.map((m, i) => (
+        {copy.team.map((m, i) => (
           <div key={i} className="member">
             <div className="member-avatar">
               <span className="member-initials">{m.initials}</span>

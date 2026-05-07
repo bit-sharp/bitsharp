@@ -23,7 +23,7 @@ export default function Contact({ copy }) {
     <section className="contact reveal" id="contact" style={{ '--reveal-i': 3 }}>
       <div className="contact-inner">
         <header className="sec-head">
-          <div className="sec-tag">04 · Contact</div>
+          <div className="sec-tag">04 · Contacts</div>
           <h2 className="sec-title">
             {copy.contactTitle}<span className="contact-period"> ?</span>
           </h2>
@@ -84,10 +84,6 @@ export default function Contact({ copy }) {
               </span>
             </div>
             <div className="info-row">
-              <span className="info-label">Response</span>
-              <span className="info-value">~2h on weekdays</span>
-            </div>
-            <div className="info-row">
               <span className="info-label">Timezone</span>
               <span className="info-value">Kharkiv · UTC+2</span>
             </div>
@@ -95,18 +91,6 @@ export default function Contact({ copy }) {
               <span className="info-label">Hours</span>
               <span className="info-value">10:00 – 19:00</span>
             </div>
-          </div>
-        </div>
-
-        <div className="contact-footer">
-          <div className="cf-left">
-            <p>Based in Kharkiv, Ukraine. Available worldwide.</p>
-          </div>
-          <div className="cf-right">
-            <a href={TG_URL} target="_blank" rel="noreferrer" className="cf-quick">
-              Skip the form, ping us on Telegram
-              <span className="btn-arrow">→</span>
-            </a>
           </div>
         </div>
       </div>
