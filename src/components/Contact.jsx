@@ -23,7 +23,7 @@ export default function Contact({ copy }) {
     <section className="contact reveal" id="contact" style={{ '--reveal-i': 3 }}>
       <div className="contact-inner">
         <header className="sec-head">
-          <div className="sec-tag">04 · Contacts</div>
+          <div className="sec-tag">{copy.contactTag}</div>
           <h2 className="sec-title">
             {copy.contactTitle}<span className="contact-period"> ?</span>
           </h2>
@@ -41,15 +41,16 @@ export default function Contact({ copy }) {
             <div className="cc-head">
               <SiTelegram className="cc-icon" />
               <span className="cc-tag">
-                <span className="cc-pulse" /> Fastest response
+                <span className="cc-pulse" /> {copy.contactTgTag}
               </span>
             </div>
             <div className="cc-body">
               <h3 className="cc-title">Telegram</h3>
               <p className="cc-value">{TG_HANDLE}</p>
+              <p className="cc-note">{copy.contactTgNote}</p>
             </div>
             <div className="cc-foot">
-              <span>Send a message</span>
+              <span>{copy.contactTgFoot}</span>
               <span className="btn-arrow">→</span>
             </div>
           </a>
@@ -61,34 +62,34 @@ export default function Contact({ copy }) {
           >
             <div className="cc-head">
               <div className="cc-mail-icon" aria-hidden="true">@</div>
-              <span className="cc-tag">Email</span>
+              <span className="cc-tag">{copy.contactMailTag}</span>
             </div>
             <div className="cc-body">
-              <h3 className="cc-title">Drop us a line</h3>
+              <h3 className="cc-title">{copy.contactMailTitle}</h3>
               <p className="cc-value">{MAIL}</p>
-              <p className="cc-note">Best for proposals, briefs, and long-form details.</p>
+              <p className="cc-note">{copy.contactMailNote}</p>
             </div>
             <div className="cc-foot">
-              <span>{copied ? 'Copied to clipboard' : 'Click to copy address'}</span>
+              <span>{copied ? copy.contactMailCopied : copy.contactMailFoot}</span>
               <span className="btn-arrow">{copied ? '✓' : '⧉'}</span>
             </div>
           </a>
 
           <div className="contact-info">
             <div className="info-row">
-              <span className="info-label">Status</span>
+              <span className="info-label">{copy.contactStatusLabel}</span>
               <span className="info-value">
                 <span className="dot dot-live" />
-                Accepting new projects
+                {copy.contactStatusValue}
               </span>
             </div>
             <div className="info-row">
-              <span className="info-label">Timezone</span>
-              <span className="info-value">Kharkiv · UTC+2</span>
+              <span className="info-label">{copy.contactTimezoneLabel}</span>
+              <span className="info-value">{copy.contactTimezoneValue}</span>
             </div>
             <div className="info-row">
-              <span className="info-label">Hours</span>
-              <span className="info-value">10:00 – 19:00</span>
+              <span className="info-label">{copy.contactHoursLabel}</span>
+              <span className="info-value">{copy.contactHoursValue}</span>
             </div>
           </div>
         </div>
