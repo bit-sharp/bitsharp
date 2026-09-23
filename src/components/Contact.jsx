@@ -3,93 +3,134 @@ import { SiTelegram } from 'react-icons/si'
 
 const TG_HANDLE = '@bitsharp_software'
 const TG_URL    = 'https://t.me/bitsharp_software'
-const MAIL      = 'bitsharpsoftware@gmail.com'
+const MAIL_USER = 'bitsharpsoftware'
+const MAIL_HOST = 'gmail.com'
+const MAIL      = `${MAIL_USER}@${MAIL_HOST}`
+// Google's account picker first, so the visitor chooses which Gmail to send from,
+// then it continues to a compose window with our address prefilled.
+const GMAIL_COMPOSE =
+  'https://accounts.google.com/AccountChooser?service=mail&continue=' +
+  encodeURIComponent(`https://mail.google.com/mail/?view=cm&to=${MAIL}`)
+
+// On phones mailto: opens the mail app; on desktop it usually opens Outlook,
+// so there we open Gmail's composer in a small popup in the bottom-right corner.
+const isTouch = () =>
+  typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
+
+function openComposePopup(e) {
+  if (isTouch() || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return
+  const w = 560, h = 640, margin = 24
+  const s = window.screen
+  const left = (s.availLeft ?? 0) + s.availWidth - w - margin
+  const top  = (s.availTop ?? 0) + s.availHeight - h - margin
+  const popup = window.open(
+    GMAIL_COMPOSE,
+    'bitsharp-compose',
+    `popup=yes,width=${w},height=${h},left=${left},top=${top}`
+  )
+  if (popup) {
+    e.preventDefault()
+    popup.focus()
+  }
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text)
+    return true
+  } catch {
+    const ta = document.createElement('textarea')
+    ta.value = text
+    ta.setAttribute('readonly', '')
+    ta.style.position = 'fixed'
+    ta.style.opacity = '0'
+    document.body.appendChild(ta)
+    ta.select()
+    const ok = document.execCommand('copy')
+    ta.remove()
+    return ok
+  }
+}
 
 export default function Contact({ copy }) {
   const [copied, setCopied] = useState(false)
 
-  const onCopy = async (e) => {
-    e.preventDefault()
-    try {
-      await navigator.clipboard.writeText(MAIL)
+  const onCopy = async () => {
+    if (await copyText(MAIL)) {
       setCopied(true)
       setTimeout(() => setCopied(false), 1800)
-    } catch {
-      window.location.href = `mailto:${MAIL}`
     }
   }
 
   return (
     <section className="contact reveal" id="contact" style={{ '--reveal-i': 3 }}>
       <div className="contact-inner">
-        <header className="sec-head">
+        <header className="sec-head contact-head">
           <div className="sec-tag">{copy.contactTag}</div>
           <h2 className="sec-title">
-            {copy.contactTitle}<span className="contact-period"> ?</span>
+            {copy.contactTitle}<span className="contact-period">.</span>
           </h2>
           <p className="sec-sub">{copy.contactSub}</p>
+
+          <ul className="contact-meta">
+            <li>
+              <span className="dot dot-live" />
+              {copy.contactStatusValue}
+            </li>
+            <li>{copy.contactHoursValue}</li>
+          </ul>
         </header>
 
-        <div className="contact-grid">
-          <a
-            href={TG_URL}
-            className="contact-card cc-tg"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="cc-glow" aria-hidden="true" />
-            <div className="cc-head">
-              <SiTelegram className="cc-icon" />
-              <span className="cc-tag">
-                <span className="cc-pulse" /> {copy.contactTgTag}
-              </span>
+        <div className="contact-cards">
+          <div className="contact-card cc-tg">
+            <div className="cc-row">
+              <SiTelegram className="cc-icon" aria-hidden="true" />
+              <div className="cc-text">
+                <h3 className="cc-title">Telegram</h3>
+                <p className="cc-value">{TG_HANDLE}</p>
+              </div>
             </div>
-            <div className="cc-body">
-              <h3 className="cc-title">Telegram</h3>
-              <p className="cc-value">{TG_HANDLE}</p>
-              <p className="cc-note">{copy.contactTgNote}</p>
+            <p className="cc-note">{copy.contactTgNote}</p>
+            <div className="cc-actions">
+              <a
+                href={TG_URL}
+                className="btn btn-primary btn-lg cc-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {copy.contactTgCta} <span className="btn-arrow">→</span>
+              </a>
             </div>
-            <div className="cc-foot">
-              <span>{copy.contactTgFoot}</span>
-              <span className="btn-arrow">→</span>
-            </div>
-          </a>
+          </div>
 
-          <a
-            href={`mailto:${MAIL}`}
-            onClick={onCopy}
-            className={`contact-card cc-mail ${copied ? 'is-copied' : ''}`}
-          >
-            <div className="cc-head">
+          <div className="contact-card cc-mail">
+            <div className="cc-row">
               <div className="cc-mail-icon" aria-hidden="true">@</div>
-              <span className="cc-tag">{copy.contactMailTag}</span>
+              <div className="cc-text">
+                <h3 className="cc-title">Email</h3>
+                <p className="cc-value">{MAIL_USER}<wbr />@{MAIL_HOST}</p>
+              </div>
             </div>
-            <div className="cc-body">
-              <h3 className="cc-title">{copy.contactMailTitle}</h3>
-              <p className="cc-value">{MAIL}</p>
-              <p className="cc-note">{copy.contactMailNote}</p>
-            </div>
-            <div className="cc-foot">
-              <span>{copied ? copy.contactMailCopied : copy.contactMailFoot}</span>
-              <span className="btn-arrow">{copied ? '✓' : '⧉'}</span>
-            </div>
-          </a>
-
-          <div className="contact-info">
-            <div className="info-row">
-              <span className="info-label">{copy.contactStatusLabel}</span>
-              <span className="info-value">
-                <span className="dot dot-live" />
-                {copy.contactStatusValue}
-              </span>
-            </div>
-            <div className="info-row">
-              <span className="info-label">{copy.contactTimezoneLabel}</span>
-              <span className="info-value">{copy.contactTimezoneValue}</span>
-            </div>
-            <div className="info-row">
-              <span className="info-label">{copy.contactHoursLabel}</span>
-              <span className="info-value">{copy.contactHoursValue}</span>
+            <p className="cc-note">{copy.contactMailNote}</p>
+            <div className="cc-actions">
+              <a
+                href={isTouch() ? `mailto:${MAIL}` : GMAIL_COMPOSE}
+                onClick={openComposePopup}
+                className="btn btn-ghost btn-lg cc-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {copy.contactMailWrite} <span className="btn-arrow">→</span>
+              </a>
+              <button
+                type="button"
+                onClick={onCopy}
+                className={`btn btn-ghost btn-lg cc-btn cc-copy ${copied ? 'is-copied' : ''}`}
+                aria-live="polite"
+              >
+                <span aria-hidden="true">{copied ? '✓' : '⧉'}</span>
+                {copied ? copy.contactMailCopied : copy.contactMailCopy}
+              </button>
             </div>
           </div>
         </div>

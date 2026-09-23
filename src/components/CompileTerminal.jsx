@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 const CMD = "bitsharp init client-project --stack=react+next+ts"
 const LOGS = [
   { t: "›", c: "installing deps…", ok: true },
-  { t: "›", c: "figma tokens · 42 components · synced", ok: true },
+  { t: "›", c: "design tokens · 42 components · synced", ok: true },
   { t: "›", c: "lighthouse · performance 98 · a11y 100", ok: true },
   { t: "›", c: "build · 0 errors · 0 warnings", ok: true },
   { t: "✓", c: "deployed → vercel · live in 23s", ok: true },

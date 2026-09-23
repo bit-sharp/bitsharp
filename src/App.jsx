@@ -10,14 +10,28 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 const ACCENT = '#AF64B2'
+const LANG_KEY = 'bitsharp-lang'
+
+function detectLanguage() {
+  try {
+    const saved = localStorage.getItem(LANG_KEY)
+    if (saved === 'en' || saved === 'uk') return saved
+  } catch {}
+  const primary = (navigator.languages?.[0] || navigator.language || '').toLowerCase()
+  return primary.startsWith('uk') ? 'uk' : 'en'
+}
 
 export default function App() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState(detectLanguage)
   const copy = COPY[language]
 
   useEffect(() => {
     document.documentElement.style.setProperty('--accent', ACCENT)
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   useEffect(() => {
     const io = new IntersectionObserver((entries) => {
@@ -38,7 +52,11 @@ export default function App() {
     if (el) window.scrollTo({ top: el.offsetTop - 40, behavior: 'smooth' })
   }
 
-  const onLanguageToggle = () => setLanguage(l => l === 'en' ? 'uk' : 'en')
+  const onLanguageToggle = () => {
+    const next = language === 'en' ? 'uk' : 'en'
+    setLanguage(next)
+    try { localStorage.setItem(LANG_KEY, next) } catch {}
+  }
 
   return (
     <div className="app">

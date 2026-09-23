@@ -1,6 +1,6 @@
 import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript,
-  SiFlutter, SiFigma, SiVuedotjs, SiSvelte,
+  SiFlutter, SiVuedotjs, SiSvelte,
   SiPython, SiNodedotjs, SiTailwindcss,
   SiPostgresql, SiGit, SiGithub, SiVite, SiSupabase
 } from 'react-icons/si'
@@ -13,7 +13,6 @@ const STACK = [
   { name: "TypeScript",  Icon: SiTypescript,  color: "#3178C6" },
   { name: "JavaScript",  Icon: SiJavascript,  color: "#F7DF1E" },
   { name: "Flutter",     Icon: SiFlutter,     color: "#54C5F8" },
-  { name: "Figma",       Icon: SiFigma,       color: "#F24E1E" },
   { name: "Python",      Icon: SiPython,      color: "#4B8BBE" },
   { name: "Node.js",     Icon: SiNodedotjs,   color: "#68A063" },
   { name: "Tailwind",    Icon: SiTailwindcss, color: "#06B6D4" },
