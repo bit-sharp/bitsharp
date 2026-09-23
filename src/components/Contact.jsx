@@ -13,26 +13,9 @@ const GMAIL_COMPOSE =
   encodeURIComponent(`https://mail.google.com/mail/?view=cm&to=${MAIL}`)
 
 // On phones mailto: opens the mail app; on desktop it usually opens Outlook,
-// so there we open Gmail's composer in a small popup in the bottom-right corner.
+// so there we open Gmail in a new tab instead.
 const isTouch = () =>
   typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
-
-function openComposePopup(e) {
-  if (isTouch() || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return
-  const w = 560, h = 640, margin = 24
-  const s = window.screen
-  const left = (s.availLeft ?? 0) + s.availWidth - w - margin
-  const top  = (s.availTop ?? 0) + s.availHeight - h - margin
-  const popup = window.open(
-    GMAIL_COMPOSE,
-    'bitsharp-compose',
-    `popup=yes,width=${w},height=${h},left=${left},top=${top}`
-  )
-  if (popup) {
-    e.preventDefault()
-    popup.focus()
-  }
-}
 
 async function copyText(text) {
   try {
@@ -115,7 +98,6 @@ export default function Contact({ copy }) {
             <div className="cc-actions">
               <a
                 href={isTouch() ? `mailto:${MAIL}` : GMAIL_COMPOSE}
-                onClick={openComposePopup}
                 className="btn btn-ghost btn-lg cc-btn"
                 target="_blank"
                 rel="noreferrer"
